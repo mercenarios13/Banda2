@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contratar a Banda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #ff4081;
+        }
+        main {
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #ff4081;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #ff4081;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #e0336b;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contrate a Banda Eclipse de Cristal</h1>
+    </header>
+    <main>
+        <div class="contact-form">
+            <h2>Entre em Contato</h2>
+            <form action="mailto:bandacontato@eclipsedocristal.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Data do Evento:</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-location">Local do Evento:</label>
+                    <input type="text" id="event-location" name="event-location" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Detalhes do Evento:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar Solicitação">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eclipse de Cristal | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
