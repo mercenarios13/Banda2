@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrate a Banda - Eclipse de Cristal</title>
+    <style>
+        body {
+            background: url('Banda2-main/contratar-bg.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: #f3efef;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4081;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ff4081;
+        }
+        input, textarea {
+            margin-top: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+            font-size: 1em;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff6090;
+        }
+        .voltar-btn {
+            display: block;
+            background-color: #444;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+        .voltar-btn:hover {
+            background-color: #666;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contrate a Banda Eclipse de Cristal</h1>
+    </header>
+    <div class="container">
+        <!-- Botão Voltar -->
+        <a href="index.html" class="voltar-btn">Voltar para Página Inicial</a>
+
+        <form onsubmit="return enviarFormulario()">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="data">Data do Evento</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="local">Local do Evento</label>
+            <input type="text" id="local" name="local" required>
+
+            <label for="detalhes">Detalhes Adicionais</label>
+            <textarea id="detalhes" name="detalhes" rows="5" placeholder="Descreva o evento..." required></textarea>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eclipse de Cristal | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function enviarFormulario() {
+            alert('Pedido de contratação enviado com sucesso! Entraremos em contato em breve.');
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Ingressos - Eclipse de Cristal</title>
+    <style>
+        body {
+            background: url('Banda2-main/eventos-bg.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: #f3efef;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4081;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .evento {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s;
+        }
+        .evento:hover {
+            transform: scale(1.05);
+        }
+        .evento h2 {
+            color: #ff4081;
+            font-size: 1.8em;
+        }
+        .evento p {
+            font-size: 1.1em;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #ff6090;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #222;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Próximos Eventos</h1>
+    </header>
+    <div class="container">
+        <div class="evento">
+            <h2>Show no Rock Arena</h2>
+            <p>Data: 12 de Julho de 2024</p>
+            <p>Local: São Paulo, SP</p>
+            <select id="payment1">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Show no Rock Arena', 'payment1')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Festival de Inverno</h2>
+            <p>Data: 28 de Janeiro de 2025</p>
+            <p>Local: Curitiba, PR</p>
+            <select id="payment2">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Festival de Inverno', 'payment2')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Turnê pelo Nordeste</h2>
+            <p>Data: 5 de Agosto de 2025</p>
+            <p>Local: Recife, PE</p>
+            <select id="payment3">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Turnê pelo Nordeste', 'payment3')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Show no Maracanã</h2>
+            <p>Data: 20 de Agosto de 2025</p>
+            <p>Local: Rio de Janeiro, RJ</p>
+            <select id="payment4">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Show no Maracanã', 'payment4')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Festival de Primavera</h2>
+            <p>Data: 15 de Setembro de 2025</p>
+            <p>Local: Florianópolis, SC</p>
+            <select id="payment5">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Festival de Primavera', 'payment5')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Noite do Eclipse</h2>
+            <p>Data: 10 de Agosto de 2025</p>
+            <p>Local: Belo Horizonte, MG</p>
+            <select id="payment6">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Noite do Eclipse', 'payment6')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Festival Sol e Lua</h2>
+            <p>Data: 25 de Setembro de 2025</p>
+            <p>Local: Fortaleza, CE</p>
+            <select id="payment7">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Festival Sol e Lua', 'payment7')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Show na Orla</h2>
+            <p>Data: 15 de Outubro de 2025</p>
+            <p>Local: Salvador, BA</p>
+            <select id="payment8">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Show na Orla', 'payment8')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Turnê das Estrelas</h2>
+            <p>Data: 5 de Novembro de 2025</p>
+            <p>Local: Brasília, DF</p>
+            <select id="payment9">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Turnê das Estrelas', 'payment9')">Comprar</button>
+        </div>
+
+        <div class="evento">
+            <h2>Encerramento da Turnê Nacional</h2>
+            <p>Data: 20 de Dezembro de 2025</p>
+            <p>Local: Porto Alegre, RS</p>
+            <select id="payment10">
+                <option value="">Escolha a forma de pagamento</option>
+                <option value="cartao">Cartão de Crédito</option>
+
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <button onclick="comprarIngresso('Festival de Primavera', 'payment5')">Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eclipse de Cristal | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function comprarIngresso(evento, paymentId) {
+            const paymentMethod = document.getElementById(paymentId).value;
+            
+            if (!paymentMethod) {
+                alert('Por favor, selecione uma forma de pagamento.');
+                return;
+            }
+
+            alert(`Você comprou ingressos para ${evento}.\nForma de pagamento: ${paymentMethod.charAt(0).toUpperCase() + paymentMethod.slice(1)}`);
+        }
+    </script>
+</body>
+</html>

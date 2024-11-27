@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografia da Banda</title>
+    <style>
+        body {
+            background: url('Banda2-main/banda1.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #f3efef;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #ff4081;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .album {
+            flex: 1 1 200px; /* Cresce, encolhe e base inicial */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .album img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 200px;
+        }
+        .album h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+        .album p {
+            margin: 5px 0;
+        }
+        .album:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .album {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discografia da Banda</h1>
+    </header>
+    <main>
+        <div class="album">
+            <a href="https://youtube.com/shorts/tawMn9hy590" target="_blank">
+                <img src="Banda2-main/imagem1.jpeg" alt="Álbum Eclipse de Cristal">
+                <h2>Eclipse de Cristal</h2>
+                <p>2021 - Trap com Beijo</p>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="https://youtu.be/OpYe7Vqeq0c" target="_blank">
+                <img src="Banda2-main/imagem2.jpeg" alt="Eclipse de Cristal">
+                <h2>Eclipse de Cristal</h2>
+                <p>2023 - Mas Existe Um Lugar</p>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="https://youtube.com/shorts/iSR8YYKas8U?feature=share" target="_blank">
+                <img src="Banda2-main/musica 3.jpeg" alt="Eclipse de Cristal">
+                <h2>Eclipse de Cristal</h2>
+                <p>2019 - Vida Louca</p>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="https://youtube.com/shorts/VMzXUu5ff7A" target="_blank">
+                <img src="Banda2-main/imagem4.jpeg" alt="Álbum Eclipse de Cristal">
+                <h2>Eclipse de Cristal</h2>
+                <p>2010 - Barbie do Morro</p>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eclipse de Cristal | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
