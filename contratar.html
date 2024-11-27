@@ -73,6 +73,15 @@
             width: 100%;
             bottom: 0;
         }
+        .result {
+            background-color: #444;
+            color: #fff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -82,7 +91,7 @@
     <main>
         <div class="contact-form">
             <h2>Entre em Contato</h2>
-            <form action="mailto:bandacontato@eclipsedocristal.com" method="post" enctype="text/plain">
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Seu Nome:</label>
                     <input type="text" id="name" name="name" required>
@@ -108,9 +117,28 @@
                 </div>
             </form>
         </div>
+
+        <div id="result" class="result">
+            <p><strong>Nome do Contratante:</strong> <span id="contratanteNome"></span></p>
+            <p>A solicitação foi recebida com sucesso. Obrigado por entrar em contato!</p>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2024 Eclipse de Cristal | Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var nome = document.getElementById("name").value;
+
+            document.getElementById("contratanteNome").innerText = nome;
+            document.getElementById("result").style.display = "block";
+
+            document.getElementById("contactForm").reset();
+        });
+    </script>
 </body>
 </html>
