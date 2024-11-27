@@ -3,28 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Discografia da Banda</title>
-    <header>
-        <h1>Eclipse de Cristal</h1>
-        <nav>
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
     <style>
-        
         body {
+            background: url('Banda2-main/banda1.jpg');
+            background-size: cover;
             font-family: Arial, sans-serif;
-            background: #111;
-            color: #fff;
+            color: #f3efef;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         header {
-            background-color: #222;
             padding: 20px;
             text-align: center;
         }
@@ -34,25 +24,27 @@
             color: #ff4081;
         }
         main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
         .album {
+            flex: 1 1 200px; /* Cresce, encolhe e base inicial */
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
             padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
-            cursor: pointer;
             text-align: center;
+            transition: transform 0.3s;
         }
         .album img {
             border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .album img:hover {
-            transform: scale(1.1);
+            width: 100%;
+            max-width: 200px;
         }
         .album h2 {
             margin: 10px 0;
@@ -60,16 +52,28 @@
             color: #ff4081;
         }
         .album p {
-            margin: 5px 0 0;
+            margin: 5px 0;
+        }
+        .album:hover {
+            transform: translateY(-5px);
         }
         footer {
-            background-color: #222;
             color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .album {
+                width: 80%;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -79,26 +83,34 @@
     </header>
     <main>
         <div class="album">
-            <a href="https://youtu.be/Qvh_GNiF_Yw?si=IG-xkAzyvOHqZOCC" target="_blank">
-                <img src="poze.jpg" alt="Álbum Eclipse de Cristal" width="200">
+            <a href="https://youtube.com/shorts/tawMn9hy590" target="_blank">
+                <img src="Banda2-main/imagem1.jpeg" alt="Álbum Eclipse de Cristal">
                 <h2>Eclipse de Cristal</h2>
-                <p>2021 - Vida louca</p>
+                <p>2021 - Trap com Beijo</p>
             </a>
         </div>
 
         <div class="album">
-            <a href="https://youtu.be/CnKAcUaovcI?si=LrIyC3pYwWPWBlQS" target="_blank">
-                <img src="Will.jpg" alt="Eclipse de Cristal" width="200">
+            <a href="https://youtu.be/OpYe7Vqeq0c" target="_blank">
+                <img src="Banda2-main/imagem2.jpeg" alt="Eclipse de Cristal">
                 <h2>Eclipse de Cristal</h2>
                 <p>2023 - Mas Existe Um Lugar</p>
             </a>
         </div>
 
         <div class="album">
-            <a href="https://youtu.be/63XyWeKWI0M?si=DCMHl5OEfdqpUQAo" target="_blank">
-                <img src="Humgria.jpg" alt="Eclipse de Cristal" width="200">
+            <a href="https://youtube.com/shorts/iSR8YYKas8U?feature=share" target="_blank">
+                <img src="Banda2-main/musica 3.jpeg" alt="Eclipse de Cristal">
                 <h2>Eclipse de Cristal</h2>
-                <p>2019 - Beijo com trap</p>
+                <p>2019 - Vida Louca</p>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="https://youtube.com/shorts/VMzXUu5ff7A" target="_blank">
+                <img src="Banda2-main/imagem4.jpeg" alt="Álbum Eclipse de Cristal">
+                <h2>Eclipse de Cristal</h2>
+                <p>2010 - Barbie do Morro</p>
             </a>
         </div>
     </main>
