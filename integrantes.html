@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <title>Integrantes da Banda</title>
     <header>
         <h1>Eclipse de Cristal</h1>
         <nav>
-            <a href="sobre.html">Sobre Nós</a>
             <a href="discografia.html">Discografia</a>
             <a href="eventos.html">Eventos</a>
             <a href="contato.html">Contato</a>
+            <a href="index.html">Home</a>
         </nav>
     </header>
     <style>
         body {
+            background: url(Banda2-main/fundo2.jpg);
+            background-size: cover;
             font-family: Arial, sans-serif;
-            background: #111;
-            color: #fff;
+            color: #ff0000;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         header {
-            background-color: #222;
+            background-color: #000000;
             padding: 20px;
             text-align: center;
         }
         h1 {
             margin: 0;
             font-size: 2em;
-            color: #ff4081;
+            color: #ffffff;
         }
         main {
             padding: 20px;
@@ -40,7 +41,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
             padding: 15px;
             border-radius: 8px;
             cursor: pointer;
@@ -56,7 +56,7 @@
         .integrante h2 {
             margin: 0;
             font-size: 1.5em;
-            color: #ff4081;
+            color: #ffffff;
         }
         .integrante p {
             margin: 5px 0 0;
@@ -65,11 +65,11 @@
             display: none;
             margin-top: 10px;
             font-size: 1em;
-            color: #ccc;
+            color: #ffffff;
         }
         footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -84,7 +84,7 @@
     </header>
     <main>
         <div class="integrante" onclick="toggleDetalhes('detalhesKauan')">
-            <img src="Integrante 1.png" alt="Kauan" width="100">
+            <img src="Banda2-main/Integrante 1.png" alt="Kauan" width="100">
             <div>
                 <h2>Kauan</h2>
                 <p>Vocalista</p>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="integrante" onclick="toggleDetalhes('detalhesLuisa')">
-            <img src="Integrante 2.png" alt="Luisa" width="100">
+            <img src="Banda2-main/Integrante 2.png" alt="Luisa" width="100">
             <div>
                 <h2>Luisa</h2>
                 <p>Guitarrista</p>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="integrante" onclick="toggleDetalhes('detalhesDiego')">
-            <img src="Integrante 3.png" alt="Diego" width="100">
+            <img src="Banda2-main/Integrante 3.png" alt="Diego" width="100">
             <div>
                 <h2>Diego</h2>
                 <p>Baixista</p>
